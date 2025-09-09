@@ -1,0 +1,194 @@
+/* Hero Section */
+.hero {
+  background: radial-gradient(circle at 20% 50%, #001a0d 0%, #000 40%, #001a0d 100%),
+              linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  min-height: 100vh;
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #00ff88 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, #00ff88 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.1;
+  animation: circuitMove 20s linear infinite;
+}
+
+@keyframes circuitMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Hero Container */
+.hero-container {
+  max-width: 1200px; /* Maximum width for large screens */
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 20px; /* Horizontal padding */
+  width: 100%; /* Full width within max-width */
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center; /* Center all text */
+  max-width: 800px; /* Limit content width for readability */
+  margin: 0 auto; /* Center the content block */
+}
+
+/* Main Title */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+/* Highlighted text in title */
+.hero-highlight {
+  color: #00ff88;
+  text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88; }
+  to { text-shadow: 0 0 30px #00ff88, 0 0 60px #00ff88; }
+}
+
+/* Description Text */
+.hero-description {
+  font-size: 1.25rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 5px rgba(170, 170, 170, 0.3);
+}
+
+/* Button Container */
+.hero-buttons {
+  display: flex; /* Flexbox layout */
+  gap: 1rem; /* Space between buttons */
+  justify-content: center; /* Center buttons */
+  flex-wrap: wrap; /* Wrap on small screens */
+  margin-bottom: 4rem; /* Space below buttons */
+}
+
+/* Base Button Styles */
+.btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Primary Button (filled) */
+.btn-primary {
+  background: linear-gradient(45deg, #00ff88, #00cc6a);
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  border: 2px solid #00ff88;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Secondary Button (outlined) */
+.btn-secondary {
+  background-color: transparent;
+  color: #00ff88;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: #00ff88;
+  color: #000;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design - Tablet */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem; /* Smaller title on tablets */
+  }
+  
+  .hero-description {
+    font-size: 1.1rem; /* Slightly smaller description */
+  }
+  
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+  }
+  
+  .btn {
+    width: 200px; /* Fixed width for mobile buttons */
+  }
+}
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 480px) {
+  .hero {
+    padding-top: 70px; /* Account for navbar */
+  }
+  
+  .hero-title {
+    font-size: 2rem; /* Even smaller title on mobile */
+  }
+  
+  .hero-description {
+    font-size: 1rem; /* Normal size on mobile */
+  }
+  
+  .hero-stats {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem; /* Less gap on mobile */
+  }
+  
+  .stat-number {
+    font-size: 2rem; /* Smaller stat numbers */
+  }
+}
