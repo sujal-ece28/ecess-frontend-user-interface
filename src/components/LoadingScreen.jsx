@@ -6,12 +6,11 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   const [currentText, setCurrentText] = useState('');
   
   const loadingTexts = [
-    'Starting up ECESS...',
-    'Loading content...',
-    'Getting things ready...',
-    'Almost there...',
-    'Just a moment more...',
-    'Welcome!'
+    'Initializing ECESS...',
+    'Loading components...',
+    'Setting up interface...',
+    'Almost ready...',
+    'Welcome to ECESS!'
   ];
 
   useEffect(() => {
@@ -40,6 +39,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         <div className="loading-logo">
           <span className="logo-text">ECESS</span>
           <div className="logo-subtitle">Electronics & Communication Engineering Students' Society</div>
+          <div className="logo-institute">NIT Durgapur</div>
         </div>
         
         <div className="loading-progress">
@@ -54,13 +54,10 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         
         <div className="loading-text">{currentText}</div>
         
-        <div className="loading-animation">
-          <div className="circuit-line"></div>
-          <div className="circuit-dots">
-            <span className="dot"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
+        <div className="loading-dots">
+          <span className="dot"></span>
+          <span className="dot"></span>
+          <span className="dot"></span>
         </div>
       </div>
     </div>

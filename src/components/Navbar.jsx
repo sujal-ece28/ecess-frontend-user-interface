@@ -2,59 +2,50 @@ import { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <div className="nav-logo">
-          <span>ECESS</span>
-        </div>
-        <ul className="nav-menu">
-          <li className="nav-item">
+    <header className="navbar">
+      <div className="container">
+        <div className="nav-content">
+          <div className="nav-logo">
+            <span>ECESS</span>
+          </div>
+
+          <nav className="nav-menu">
             <a href="#home" className="nav-link">Home</a>
-          </li>
-          <li className="nav-item">
             <a href="#about" className="nav-link">About</a>
-          </li>
-          <li className="nav-item">
             <a href="#events" className="nav-link">Events</a>
-          </li>
-          <li className="nav-item">
             <a href="#team" className="nav-link">Team</a>
-          </li>
-          <li className="nav-item">
             <a href="#contact" className="nav-link">Contact</a>
-          </li>
-        </ul>
+          </nav>
 
-        <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <button className="btn btn-primary nav-cta">
+            Join ECESS
+          </button>
+
+          <button 
+            className="nav-toggle"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-      </div>
 
-      {isOpen && (
-        <ul className="nav-menu-mobile">
-          <li className="nav-item-mobile">
-            <a href="#home" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Home</a>
-          </li>
-          <li className="nav-item-mobile">
-            <a href="#about" className="nav-link-mobile" onClick={() => setIsOpen(false)}>About</a>
-          </li>
-          <li className="nav-item-mobile">
-            <a href="#events" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Events</a>
-          </li>
-          <li className="nav-item-mobile">
-            <a href="#team" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Team</a>
-          </li>
-          <li className="nav-item-mobile">
-            <a href="#contact" className="nav-link-mobile" onClick={() => setIsOpen(false)}>Contact</a>
-          </li>
-        </ul>
-      )}
-    </nav>
+        {isMenuOpen && (
+          <div className="nav-mobile">
+            <a href="#home" className="nav-mobile-link">Home</a>
+            <a href="#about" className="nav-mobile-link">About</a>
+            <a href="#events" className="nav-mobile-link">Events</a>
+            <a href="#team" className="nav-mobile-link">Team</a>
+            <a href="#contact" className="nav-mobile-link">Contact</a>
+            <button className="btn btn-primary">Join ECESS</button>
+          </div>
+        )}
+      </div>
+    </header>
   );
 };
 

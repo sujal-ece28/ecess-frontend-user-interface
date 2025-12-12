@@ -18,13 +18,15 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
       <Navbar />
-      <Hero />
-      <About />
-      <Events />
+      <main>
+        <Hero />
+        <About />
+        <Events />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

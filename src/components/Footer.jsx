@@ -1,91 +1,65 @@
 import './Footer.css';
-import gmailIcon from '../assets/icons/gmail.jpg';
-import linkedinIcon from '../assets/icons/linkedin.png';
-import instaIcon from '../assets/icons/insta.webp';
-import twitterIcon from '../assets/icons/twitter.jpeg';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="container">
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-title">ECESS</h3>
             <p className="footer-description">
-              Electronics & Communication Engineering Students' Society<br/>
-              National Institute of Technology, Durgapur
+              Electronics & Communication Engineering Students' Society at NIT Durgapur. 
+              Building the future through innovation and collaboration.
             </p>
             <div className="footer-social">
-              <a href="mailto:ecess@nitdgp.ac.in" className="social-link">
-                <img src={gmailIcon} alt="Email" />
+              <a href="#" className="social-link">
+                <img src="/src/assets/icons/linkedin.png" alt="LinkedIn" />
               </a>
               <a href="#" className="social-link">
-                <img src={linkedinIcon} alt="LinkedIn" />
+                <img src="/src/assets/icons/insta.webp" alt="Instagram" />
               </a>
               <a href="#" className="social-link">
-                <img src={instaIcon} alt="Instagram" />
+                <img src="/src/assets/icons/twitter.jpeg" alt="Twitter" />
               </a>
               <a href="#" className="social-link">
-                <img src={twitterIcon} alt="Twitter" />
+                <img src="/src/assets/icons/gmail.jpg" alt="Email" />
               </a>
             </div>
           </div>
-
+          
           <div className="footer-section">
             <h4 className="footer-subtitle">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="#about">About Us</a></li>
               <li><a href="#events">Events</a></li>
-              <li><a href="#team">Team</a></li>
+              <li><a href="#team">Our Team</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-
+          
           <div className="footer-section">
-            <h4 className="footer-subtitle">Resources</h4>
+            <h4 className="footer-subtitle">Events</h4>
             <ul className="footer-links">
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Tutorials</a></li>
-              <li><a href="#">Research Papers</a></li>
-              <li><a href="#">Alumni Network</a></li>
+              <li><a href="#">Technical Workshops</a></li>
+              <li><a href="#">Coding Competitions</a></li>
+              <li><a href="#">Guest Lectures</a></li>
+              <li><a href="#">Project Exhibitions</a></li>
             </ul>
           </div>
-
+          
           <div className="footer-section">
-            <h4 className="footer-subtitle">Quick Info</h4>
-            <div className="system-info">
-              <div className="info-line">
-                <span className="info-label">Status:</span>
-                <span className="info-value online">Active</span>
-              </div>
-              <div className="info-line">
-                <span className="info-label">Since:</span>
-                <span className="info-value">2022</span>
-              </div>
-              <div className="info-line">
-                <span className="info-label">Members:</span>
-                <span className="info-value">200+</span>
-              </div>
-              <div className="info-line">
-                <span className="info-label">Location:</span>
-                <span className="info-value">NIT Durgapur</span>
-              </div>
+            <h4 className="footer-subtitle">Contact Info</h4>
+            <div className="contact-info">
+              <p>NIT Durgapur</p>
+              <p>Mahatma Gandhi Rd, A-Zone</p>
+              <p>Durgapur, West Bengal 713209</p>
+              <p>ecess@nitdgp.ac.in</p>
             </div>
           </div>
         </div>
-
+        
         <div className="footer-bottom">
-          <div className="footer-divider"></div>
-          <div className="footer-copyright">
-            <p>
-              &copy; 2024 ECESS | Electronics & Communication Engineering Students' Society
-            </p>
-            <p className="footer-tech">
-              Built with React.js by ECESS Web Team
-            </p>
-          </div>
+          <p>&copy; 2024 ECESS - NIT Durgapur. All rights reserved.</p>
         </div>
       </div>
     </footer>
